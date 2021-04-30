@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halál</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+        function faktorial(n){
+            let fac = 1
+            for ( i = 1; i < n; i++) {
+                fac = fac * (i+1)
+            }
+            return fac;
+        }
+        function hfaktorialis(){
+        document.write("<table class='tab'>");
+        document.write("<tr><td>n!</td><td>Eredmémy</td></tr>")
+        for (i = 0; i < 21 ; i++) {
+            if (i != 0) {
+                document.write("<tr class='tab'><td class='tab'>"+ i +"!</td><td class='tab'>"+ faktorial(i) +"</td></tr>")
+            }else{
+                document.write("<tr class='tab'><td class='tab'>"+ i +"!</td><td class='tab'>"+ 1 +"</td></tr>")
+            }  
+        }
+        document.write("</table>");
+        }
+        hfaktorialis();    
+    </script>
+    
+</body>
+</html>
